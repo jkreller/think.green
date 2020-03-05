@@ -11,15 +11,20 @@ import SwiftUI
 struct SwipeCardView: View {
     var title: String
     var inBackground: Bool = false
-    
     @State var cardHeight: CGFloat = 0
     @Binding var tapped: Bool
+    var animationDuration: Double? = nil
+    var onTap: (() -> Void)? = nil
     
     var tap: some Gesture {
         TapGesture(count: 1)
             .onEnded { _ in
                 if (!self.inBackground) {
                     self.tapped.toggle()
+                }
+                
+                if (self.onTap != nil) {
+                    self.onTap!()
                 }
         }
     }
@@ -40,9 +45,9 @@ struct SwipeCardView: View {
                     self.cardHeight = geometry.size.height
                 }
             })
-            .animation(.easeOut)
             // Calculate offset by half screen height minus half card height minus fixed value for card header
             .offset(y: self.tapped ? 0 : UIScreen.main.bounds.height / 2 - self.cardHeight / 2 - 43)
+            .animation((self.animationDuration != nil) ? .easeOut(duration: self.animationDuration!) : .easeOut)
             .frame(height: self.tapped ? self.cardHeight : 0)
             .gesture(self.tap)
     }
