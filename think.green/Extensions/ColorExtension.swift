@@ -10,6 +10,7 @@ import SwiftUI
 
 extension Color {
     static let background = Color("background")
+    static let backgroundHighlighted = Color("backgroundHighlighted")
     static let shadow = Color("shadow")
     static let defaultText = Color("defaultText")
     static let secondaryDefaultText = Color("secondaryDefaultText")

@@ -1,5 +1,5 @@
 //
-//  SwipeView.swift
+//  HideableCard.swift
 //  think.green
 //
 //  Created by Julian Kreller on 28.02.20.
@@ -8,10 +8,12 @@
 
 import SwiftUI
 
-struct SwipeCardView: View {
+struct InteractiveCard: View {
     var title: String
+    var content: String
+    var yOffset: CGFloat
     var inBackground: Bool = false
-    @State var cardHeight: CGFloat = 0
+    @Binding var cardHeight: CGFloat
     @Binding var tapped: Bool
     var animationDuration: Double? = nil
     var onTap: (() -> Void)? = nil
@@ -36,17 +38,18 @@ struct SwipeCardView: View {
     //}
     
     var body: some View {
-        CardView(title: self.title)
+        Card(title: self.title, content: self.content)
             .scaleEffect(self.inBackground ? 0.9 : 1, anchor: .top)
             .opacity(self.inBackground ? 0.8 : 1)
             .padding(.top, self.inBackground ? -16 : nil)
+            .padding([.leading, .trailing])
             .background(GeometryReader { geometry in
                 Color.clear.onAppear {
                     self.cardHeight = geometry.size.height
                 }
             })
-            // Calculate offset by half screen height minus half card height minus fixed value for card header
-            .offset(y: self.tapped ? 0 : UIScreen.main.bounds.height / 2 - self.cardHeight / 2 - 43)
+            // Y-offset if not tapped
+            .offset(y: self.tapped ? 0 : yOffset)
             .animation((self.animationDuration != nil) ? .easeOut(duration: self.animationDuration!) : .easeOut)
             .frame(height: self.tapped ? self.cardHeight : 0)
             .gesture(self.tap)
@@ -55,6 +58,6 @@ struct SwipeCardView: View {
 
 struct SwipeCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ThoughtDetail(thought: thoughtData[2])
     }
 }

@@ -6,16 +6,22 @@
 //  Copyright © 2020 Julian Kreller. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
 
-struct Thought {
+struct Thought: Hashable, Decodable, Identifiable {
+    var id: Int
     let title: String
     let description: String
     let reason: String
-    
-    init(title: String, description: String, reason: String) {
-        self.title = title
-        self.description = description
-        self.reason = reason
+    fileprivate var imageName: String
+    var category: Category
+    var image: Image {
+        Image(self.imageName)
+    }
+
+    enum Category: String, CaseIterable, Codable, Hashable {
+        case carbonDioxide = "Carbon dioxide"
+        case plastic = "Plastic"
+        case water = "Water"
     }
 }

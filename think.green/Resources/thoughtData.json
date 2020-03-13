@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Drive by bike!",
+        "category": "Carbon dioxide",
+        "description": "If possible, take the bike instead of other means of transport!",
+        "reason": "Driving the bike is a good way to environmentally friendly transportation, without any CO2 emissions.",
+        "id": 1001,
+        "imageName": "bike"
+    },
+    {
+        "title": "Close the water tap!",
+        "category": "Water",
+        "description": "Close the water tap ad fast as possible! Don't let water run if you don't need it.",
+        "reason": "Water is a finite resource.",
+        "id": 1002,
+        "imageName": "water-tap"
+    },
+    {
+        "title": "Lorem ipsum dolor sit amet!",
+        "category": "Carbon dioxide",
+        "description": "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet.",
+        "reason": "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet amet ipsum dolor sit amet amet ipsum dolor sit amet.",
+        "id": 1003,
+        "imageName": "bike"
+    },
+    {
+        "title": "Lorem ipsum dolor sit amet ipsum dolor!",
+        "category": "Carbon dioxide",
+        "description": "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet.",
+        "reason": "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet amet ipsum dolor sit amet amet ipsum dolor sit amet.",
+        "id": 1004,
+        "imageName": "bike"
+    },
+    {
+        "title": "Lorem ipsum!",
+        "category": "Carbon dioxide",
+        "description": "Lorem ipsum dolor sit amet.",
+        "reason": "Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet amet ipsum dolor sit amet amet ipsum dolor sit amet ipsum dolor sit amet amet ipsum dolor sit amet.",
+        "id": 1005,
+        "imageName": "bike"
+    }
+]

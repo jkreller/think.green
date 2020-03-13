@@ -11,7 +11,7 @@ import SwiftUI
 struct SecondaryTitleTextStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .font(.system(size: 30, weight: .medium))
             .foregroundColor(.secondaryTitleText)
+            .font(.system(size: 30, weight: .medium))
     }
 }

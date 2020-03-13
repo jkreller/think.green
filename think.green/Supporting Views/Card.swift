@@ -8,31 +8,33 @@
 
 import SwiftUI
 
-struct CardView: View {
+struct Card: View {
     var title: String
+    var content: String
     
     var body: some View {
         VStack {
-            Text(title)
+            Text(self.title)
                 .modifier(SecondaryTitleTextStyle())
                 .padding(EdgeInsets(top: 10, leading: 0, bottom: 20, trailing: 0))
                 
-            Text("If possible, take the bike instead of other means of transport!")
+            Text(self.content)
                 .modifier(SecondaryDefaultTextStyle())
                 .multilineTextAlignment(.center)
                 .padding([.leading, .trailing, .bottom])
         }
+        .frame(maxWidth: .infinity)
+        .fixedSize(horizontal: false, vertical: true)
         .padding()
         .background(Color.card)
         .cornerRadius(12)
         .shadow(color: Color.shadow, radius: 6, x: 0, y: 3)
-        .fixedSize(horizontal: false, vertical: true)
     }
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(title: "What?")
+        Card(title: "What?", content: thoughtData[0].description)
             .previewLayout(.sizeThatFits)
             .padding()
     }

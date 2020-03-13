@@ -10,6 +10,7 @@ import SwiftUI
 
 struct SecondaryDefaultTextStyle: ViewModifier {
     func body(content: Content) -> some View {
-        content.foregroundColor(.secondaryDefaultText)
+        content
+            .foregroundColor(.secondaryDefaultText)
     }
 }
