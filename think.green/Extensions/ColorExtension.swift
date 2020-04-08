@@ -10,10 +10,11 @@ import SwiftUI
 
 extension Color {
     static let background = Color("background")
-    static let backgroundHighlighted = Color("backgroundHighlighted")
     static let shadow = Color("shadow")
     static let defaultText = Color("defaultText")
     static let secondaryDefaultText = Color("secondaryDefaultText")
     static let secondaryTitleText = Color("secondaryTitleText")
     static let card = Color("card")
+    static let category = Color("category")
+    static let categoryContent = Color("categoryContent")
 }

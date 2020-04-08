@@ -41,7 +41,7 @@ struct InteractiveCard: View {
         Card(title: self.title, content: self.content)
             .scaleEffect(self.inBackground ? 0.9 : 1, anchor: .top)
             .opacity(self.inBackground ? 0.8 : 1)
-            .padding(.top, self.inBackground ? -16 : nil)
+            .padding(.top, self.inBackground ? -25 : 0)
             .padding([.leading, .trailing])
             .background(GeometryReader { geometry in
                 Color.clear.onAppear {
@@ -58,6 +58,6 @@ struct InteractiveCard: View {
 
 struct SwipeCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ThoughtDetail(thought: thoughtData[2])
+        ThoughtDetail(thought: thoughtData[3])
     }
 }

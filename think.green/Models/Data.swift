@@ -10,6 +10,7 @@ import SwiftUI
 import CoreLocation
 
 let thoughtData: [Thought] = load("thoughtData.json")
+let categoryData: [Category] = load("categoryData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

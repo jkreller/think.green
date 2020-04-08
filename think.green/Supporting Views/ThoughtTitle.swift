@@ -23,24 +23,20 @@ struct ThoughtTitle: View {
 
             Text(self.title)
                 .modifier(LargeTitleTextStyle())
-                .padding([.bottom, .leading, .trailing])
+                .padding([.leading, .trailing])
                 .fixedSize(horizontal: false, vertical: true)
                 .multilineTextAlignment(.center)
         }
         .background(GeometryReader { geometry in
             Color.clear.onAppear {
                 self.titleHeight = geometry.size.height
-                print(self.titleHeight)
             }
         })
     }
 }
 
-//struct ThoughtTitleView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ZStack {
-//            Color.background.frame(height: 400)
-//            ThoughtTitle(image: thoughtData[1].image, title: thoughtData[1].title)
-//        }.previewLayout(.sizeThatFits)
-//    }
-//}
+struct ThoughtTitleView_Previews: PreviewProvider {
+    static var previews: some View {
+        ThoughtDetail(thought: thoughtData[3])
+    }
+}

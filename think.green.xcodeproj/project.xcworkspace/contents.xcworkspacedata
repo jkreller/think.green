@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:think.green.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
