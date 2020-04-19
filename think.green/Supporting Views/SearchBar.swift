@@ -12,12 +12,10 @@ struct SearchBar: View {
     @Binding var text: String
 
     var body: some View {
-        ZStack(alignment: .leading) {
-            TextField("Search", text: $text)
-        }
-        .padding(10)
-        .background(Color.defaultText.opacity(0.4))
-        .cornerRadius(50)
+        TextField("Search", text: $text)
+            .padding(10)
+            .background(Color.defaultText.opacity(0.4))
+            .cornerRadius(50)
     }
 }
 

@@ -11,13 +11,10 @@ import Foundation
 
 struct Categories: View {
     @Binding var showCategories: Bool
+    @Binding var chosenCategory: Category?
     
     var navBarItems: some View {
-        Button(action: {
-            withAnimation {
-                self.showCategories = false
-            }
-        }) {
+        Button(action: self.hideCategories) {
             Image(systemName: "rectangle.grid.1x2")
                 .modifier(SymbolTextStyle())
         }
@@ -30,18 +27,14 @@ struct Categories: View {
                     ScrollView(showsIndicators: false) {
                         GridStack(rows: (categoryData.count - 1) / 2 + 1, columns: 2, hAlignment: .leading) { index, row, col in
                             if (categoryData.endIndex > index) {
-                                VStack {
-                                    categoryData[index].image
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(height: geometry.size.width * 0.15)
-                                    Text(categoryData[index].name)
-                                }
-                                .frame(width: geometry.size.width * 0.3, height: geometry.size.width * 0.3)
-                                .background(Color.category)
-                                .cornerRadius(20)
-                                .padding(25)
-                                .modifier(CategoryTextStyle(screenWidth: geometry.size.width))
+                                // Don't show last element if it's an odd amount of elements
+                                CategoryBadge(
+                                    category: categoryData[index],
+                                    parentWidth: geometry.size.width,
+                                    onTap: {
+                                        self.chooseCategory(category: categoryData[index])
+                                    }
+                                )
                             }
                         }
                     }
@@ -51,14 +44,23 @@ struct Categories: View {
             .navigationBarItems(trailing: self.navBarItems)
         }
     }
+    
+    func hideCategories() {
+        withAnimation {
+            self.showCategories = false
+        }
+    }
+    
+    func chooseCategory(category: Category) {
+        self.hideCategories()
+        self.chosenCategory = category
+    }
 }
 
 struct Categories_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            //Categories(showCategories: .constant(true))
-            //.previewDevice("iPhone SE")
-            Categories(showCategories: .constant(true))
+            Categories(showCategories: .constant(true), chosenCategory: .constant(categoryData[0]))
         }
     }
 }
