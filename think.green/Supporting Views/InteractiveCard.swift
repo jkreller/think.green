@@ -15,11 +15,31 @@ struct InteractiveCard: View {
     var inBackground: Bool = false
     @Binding var cardHeight: CGFloat
     @Binding var isRevealed: Bool
-    var animationDuration: Double? = nil
-    var onTap: (() -> Void)? = nil
+    @Binding var zIndex: Double?
     
+    // Drag variables
     @Binding var dragFactor: CGFloat
-    @State var dragYOffset: CGFloat = 0
+    @State private var dragYOffset: CGFloat = 0
+    
+    init(
+        title: String,
+        content: String,
+        yOffset: CGFloat,
+        inBackground: Bool = false,
+        cardHeight: Binding<CGFloat>,
+        isRevealed: Binding<Bool>,
+        zIndex: Binding<Double?> = .constant(nil),
+        dragFactor: Binding<CGFloat>
+    ) {
+        self.title = title
+        self.content = content
+        self.yOffset = yOffset
+        self.inBackground = inBackground
+        self._cardHeight = cardHeight
+        self._isRevealed = isRevealed
+        self._zIndex = zIndex
+        self._dragFactor = dragFactor
+    }
     
     var tap: some Gesture {
         TapGesture(count: 1)
@@ -28,17 +48,21 @@ struct InteractiveCard: View {
                     self.isRevealed.toggle()
                 }
                 
-                if (self.onTap != nil) {
-                    self.onTap!()
-                }
+                self.setZIndex(delayed: true)
         }
     }
     
+    // Constants
+    let cardAnimationDuration: Double = 0.3
+    
     func getDrag(cardRevealedYPosition: CGFloat) -> some Gesture {
-        DragGesture(coordinateSpace: .global)
+        return DragGesture(coordinateSpace: .global)
             .onChanged { value in
                 self.dragYOffset = value.translation.height
                 self.dragFactor = -(self.dragYOffset / self.yOffset)
+                
+                // When card is being dragged it should always be on top
+                self.zIndex = 1
             }
             .onEnded { value in
                 let cardHiddenYPosition = cardRevealedYPosition + self.yOffset
@@ -51,9 +75,27 @@ struct InteractiveCard: View {
                     self.isRevealed = false
                 }
                 
+                // Reset variables
                 self.dragYOffset = 0
                 self.dragFactor = 0
+                
+                self.setZIndex()
             }
+    }
+    
+    // Set z-index according to reveal-status
+    // Optional: setting to 0 can be delayed by cardAnimationDuration seconds
+    func setZIndex(delayed: Bool = false) {
+        if (self.isRevealed) {
+            self.zIndex = 1
+        } else if (delayed) {
+            // Delay setting of zIndex by cardAnimationDuration to avoid wrong overlay order when moving cards
+            DispatchQueue.main.asyncAfter(deadline: .now() + self.cardAnimationDuration) {
+                self.zIndex = 0
+            }
+        } else {
+            self.zIndex = 0
+        }
     }
     
     var body: some View {
@@ -70,7 +112,7 @@ struct InteractiveCard: View {
             })
             // Add y-offset (move to bottom) if not revealed
             .offset(y: self.dragYOffset + (self.isRevealed ? 0 : self.yOffset))
-            .animation((self.animationDuration != nil) ? .easeOut(duration: self.animationDuration!) : .easeOut)
+            .animation((self.zIndex != nil) ? .easeOut(duration: self.cardAnimationDuration) : .easeOut)
             .gesture(self.tap)
             .gesture(self.getDrag(cardRevealedYPosition: geometry.frame(in: .global).origin.y))
         }
@@ -80,6 +122,6 @@ struct InteractiveCard: View {
 
 struct InteractiveCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ThoughtDetail(thought: thoughtData[4])
+        ThoughtDetail(thought: thoughtData[2])
     }
 }

@@ -15,7 +15,7 @@ struct ThoughtDetail: View {
     // State properties
     @State var tappedWhatCard: Bool = false
     @State var tappedWhyCard: Bool = false
-    @State var zIndexWhyCard: Double = 0
+    @State var zIndexWhyCard: Double? = 0
     @State var whatCardHeight: CGFloat = 0
     @State var whyCardHeight: CGFloat = 0
     @State var whatCardDragFactor: CGFloat = 0
@@ -26,7 +26,6 @@ struct ThoughtDetail: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     // Constants
-    let cardAnimationDuration: Double = 0.3
     let cardHeaderHeight: CGFloat = 108
     
     var backButton: some View {
@@ -49,7 +48,7 @@ struct ThoughtDetail: View {
                             .animation(.easeOut)
                             .padding(.top, 20)
                             // Set offset when card is not tapped to move with card
-                            .offset(y: self.tappedWhatCard ? 0 : -0.5 * self.whatCardHeight * self.whatCardDragFactor)
+                            .offset(y: self.tappedWhatCard ? -0.5 * self.cardHeaderHeight : -0.5 * self.whatCardHeight * self.whatCardDragFactor - 0.5 * self.cardHeaderHeight)
                         
                         ZStack {
                             InteractiveCard(
@@ -58,13 +57,12 @@ struct ThoughtDetail: View {
                                 yOffset: self.calculateCardOffset(cardHeight: self.whyCardHeight, availableSpace: geometry.size.height),
                                 cardHeight: self.$whyCardHeight,
                                 isRevealed: self.$tappedWhyCard,
-                                animationDuration: self.cardAnimationDuration,
-                                onTap: self.setZIndexDelayed,
+                                zIndex: self.$zIndexWhyCard,
                                 dragFactor: self.$whatCardDragFactor
                             )
-                                .zIndex(self.zIndexWhyCard)
-                                // Set offset to show up in screen if card was not tapped
-                                .offset(y: self.tappedWhyCard ? 0 : self.cardHeaderHeight * (self.whyCardDragFactor - 1))
+                                .zIndex(self.zIndexWhyCard!)
+                                // Set offset to show up in screen if card was not tapped by y-offset minus card header height
+                                .offset(y: self.tappedWhyCard ? -0.5 * self.cardHeaderHeight : self.cardHeaderHeight * (-0.5 * self.whyCardDragFactor + self.whyCardDragFactor - 1))
                             
                             InteractiveCard(
                                 title: "What?",
@@ -73,11 +71,10 @@ struct ThoughtDetail: View {
                                 inBackground: self.tappedWhyCard,
                                 cardHeight: self.$whatCardHeight,
                                 isRevealed: self.$tappedWhatCard,
-                                animationDuration: self.cardAnimationDuration,
                                 dragFactor: self.$whatCardDragFactor
                             )
-                                // Set offset to show up in screen if card was not tapped
-                                .offset(y: self.tappedWhatCard ? 0 : self.cardHeaderHeight * (self.whatCardDragFactor - 1))
+                                // Set offset to show up in screen if card was not tapped by y-offset minus card header height
+                                .offset(y: self.tappedWhatCard ? -0.5 * self.cardHeaderHeight : self.cardHeaderHeight * (-0.5 * self.whatCardDragFactor + self.whatCardDragFactor - 1))
                         }
                     }
                 }
@@ -87,17 +84,6 @@ struct ThoughtDetail: View {
         }
         .navigationBarTitle("")
         .navigationBarHidden(true)
-    }
-    
-    func setZIndexDelayed() {
-        if (self.tappedWhyCard) {
-            self.zIndexWhyCard = 1
-        } else {
-            // Delay setting of zIndex by cardAnimationDuration to avoid wrong overlay order when moving cards
-            DispatchQueue.main.asyncAfter(deadline: .now() + self.cardAnimationDuration) {
-                self.zIndexWhyCard = 0
-            }
-        }
     }
     
     // For card offset a distinction between devices with and without notch has to be made (because of status bar safe area)
