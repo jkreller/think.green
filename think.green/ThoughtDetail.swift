@@ -13,8 +13,6 @@ struct ThoughtDetail: View {
     let thought: Thought
     
     // State properties
-    @State var tappedWhatCard: Bool = false
-    @State var tappedWhyCard: Bool = false
     @State var zIndexWhyCard: Double? = 0
     @State var whatCardHeight: CGFloat = 0
     @State var whyCardHeight: CGFloat = 0
@@ -24,9 +22,6 @@ struct ThoughtDetail: View {
 
     // Environment variables
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
-    // Constants
-    let cardHeaderHeight: CGFloat = 108
     
     var backButton: some View {
         Button(action: { self.presentationMode.wrappedValue.dismiss() }) {
@@ -43,12 +38,12 @@ struct ThoughtDetail: View {
                 GeometryReader { geometry in
                     VStack {
                         ThoughtTitle(image: self.thought.image, title: self.thought.title, titleHeight: self.$titleHeight)
-                            // Set scale effect when card was tapped to decrease size according to card drag
-                            .scaleEffect(self.tappedWhatCard ? 0.8 : 1 - (0.2 * self.whatCardDragFactor), anchor: .bottom)
+                            // Set scale effect to decrease size according to what-card drag
+                            .scaleEffect(1 - (0.2 * self.whatCardDragFactor), anchor: .bottom)
                             .animation(.easeOut)
                             .padding(.top, 20)
                             // Set offset when card is not tapped to move with card
-                            .offset(y: self.tappedWhatCard ? -0.5 * self.cardHeaderHeight : -0.5 * self.whatCardHeight * self.whatCardDragFactor - 0.5 * self.cardHeaderHeight)
+                            .offset(y: -InteractiveCard.cardHeaderHeight * 0.5)
                         
                         ZStack {
                             InteractiveCard(
@@ -56,25 +51,19 @@ struct ThoughtDetail: View {
                                 content: self.thought.reason,
                                 yOffset: self.calculateCardOffset(cardHeight: self.whyCardHeight, availableSpace: geometry.size.height),
                                 cardHeight: self.$whyCardHeight,
-                                isRevealed: self.$tappedWhyCard,
                                 zIndex: self.$zIndexWhyCard,
-                                dragFactor: self.$whatCardDragFactor
+                                revealFactor: self.$whyCardDragFactor
                             )
                                 .zIndex(self.zIndexWhyCard!)
-                                // Set offset to show up in screen if card was not tapped by y-offset minus card header height
-                                .offset(y: self.tappedWhyCard ? -0.5 * self.cardHeaderHeight : self.cardHeaderHeight * (-0.5 * self.whyCardDragFactor + self.whyCardDragFactor - 1))
                             
                             InteractiveCard(
                                 title: "What?",
                                 content: self.thought.description,
                                 yOffset: self.calculateCardOffset(cardHeight: self.whatCardHeight, availableSpace: geometry.size.height),
-                                inBackground: self.tappedWhyCard,
+                                inBackgroundFactor: self.$whyCardDragFactor,
                                 cardHeight: self.$whatCardHeight,
-                                isRevealed: self.$tappedWhatCard,
-                                dragFactor: self.$whatCardDragFactor
+                                revealFactor: self.$whatCardDragFactor
                             )
-                                // Set offset to show up in screen if card was not tapped by y-offset minus card header height
-                                .offset(y: self.tappedWhatCard ? -0.5 * self.cardHeaderHeight : self.cardHeaderHeight * (-0.5 * self.whatCardDragFactor + self.whatCardDragFactor - 1))
                         }
                     }
                 }
@@ -91,14 +80,14 @@ struct ThoughtDetail: View {
         var availableSpace: CGFloat = availableSpace
         if (UIDevice.current.hasNotch) {
             // If screen has notch use total screen height
-            availableSpace = UIScreen.main.bounds.height + self.cardHeaderHeight
+            availableSpace = UIScreen.main.bounds.height + InteractiveCard.cardHeaderHeight
         }
         
         // Calculate card y-offset by card height plus half of left space on screen minus fix value (card header)
         let cardOffset = cardHeight + (availableSpace - cardHeight - self.titleHeight) * 0.5 - 110
 
         // If screen has no notch add nav bar height to offset because full screen size is not used
-        return UIDevice.current.hasNotch ? cardOffset : cardOffset + self.cardHeaderHeight
+        return UIDevice.current.hasNotch ? cardOffset : cardOffset + InteractiveCard.cardHeaderHeight
     }
 }
 
@@ -111,6 +100,6 @@ extension UIDevice {
 
 struct ThoughtDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ThoughtDetail(thought: thoughtData[3])
+        ThoughtDetail(thought: thoughtData[4])
     }
 }

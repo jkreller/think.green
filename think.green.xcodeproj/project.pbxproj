@@ -26,7 +26,6 @@
 		217A63BD2411BFC300F3832D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217A63BC2411BFC300F3832D /* BaseView.swift */; };
 		21912C1E243D095700F813D5 /* GridStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21912C1D243D095700F813D5 /* GridStack.swift */; };
 		21A893DF2446602A004D52A2 /* CategoryBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A893DE24466029004D52A2 /* CategoryBadge.swift */; };
-		21B6C34C244CADE800122D07 /* TextFieldTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B6C34B244CADE800122D07 /* TextFieldTest.swift */; };
 		21B79140243A4595002908CE /* CategoryTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B7913F243A4595002908CE /* CategoryTextStyle.swift */; };
 		21C701CB2409B980003C47F0 /* InteractiveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C701CA2409B980003C47F0 /* InteractiveCard.swift */; };
 		21CDC92523C7A5E600A1DA0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CDC92423C7A5E600A1DA0D /* AppDelegate.swift */; };
@@ -63,7 +62,6 @@
 		217A63BC2411BFC300F3832D /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		21912C1D243D095700F813D5 /* GridStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridStack.swift; sourceTree = "<group>"; };
 		21A893DE24466029004D52A2 /* CategoryBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBadge.swift; sourceTree = "<group>"; };
-		21B6C34B244CADE800122D07 /* TextFieldTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTest.swift; sourceTree = "<group>"; };
 		21B7913F243A4595002908CE /* CategoryTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTextStyle.swift; sourceTree = "<group>"; };
 		21C701CA2409B980003C47F0 /* InteractiveCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveCard.swift; sourceTree = "<group>"; };
 		21CDC92123C7A5E600A1DA0D /* think.green.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = think.green.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,7 +153,6 @@
 				217A63BC2411BFC300F3832D /* BaseView.swift */,
 				21687633242BE8A400B36395 /* MainView.swift */,
 				21CDC92823C7A5E600A1DA0D /* ThoughtDetail.swift */,
-				21B6C34B244CADE800122D07 /* TextFieldTest.swift */,
 				217A63B62411BA8B00F3832D /* ThoughtList.swift */,
 				21D24EF8242BA9140005E6BC /* Categories.swift */,
 				21CDC92423C7A5E600A1DA0D /* AppDelegate.swift */,
@@ -282,7 +279,6 @@
 			files = (
 				21A893DF2446602A004D52A2 /* CategoryBadge.swift in Sources */,
 				21CDC92523C7A5E600A1DA0D /* AppDelegate.swift in Sources */,
-				21B6C34C244CADE800122D07 /* TextFieldTest.swift in Sources */,
 				21EB080723F49BA900965FF2 /* DefaultTextStyle.swift in Sources */,
 				21CDC92723C7A5E600A1DA0D /* SceneDelegate.swift in Sources */,
 				217A63BD2411BFC300F3832D /* BaseView.swift in Sources */,
