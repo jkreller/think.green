@@ -27,25 +27,23 @@ struct ThoughtList: View {
         self.firstThoughtId = firstThoughtId
     }
     
-    var navBarItems: some View {
-        HStack {
-            Button(action: {
-                withAnimation {
-                    self.showCategories = true
-                }
-            }) {
-                Image(systemName: "square.grid.2x2")
-                    .modifier(SymbolTextStyle())
-            }
-            SearchBar(text: self.$searchText)
-                .frame(width: UIScreen.main.bounds.width - 70)
-        }
-    }
-    
     var body: some View {
          NavigationView {
             BaseView {
                 VStack(alignment: .trailing, spacing: 0) {
+                    HStack {
+                        Button(action: {
+                            withAnimation {
+                                self.showCategories = true
+                            }
+                        }) {
+                            Image(systemName: "square.grid.2x2")
+                                .modifier(SymbolTextStyle())
+                        }
+                        SearchBar(text: self.$searchText)
+                            .frame(width: UIScreen.main.bounds.width - 70)
+                    }
+                    
                     if (self.chosenCategory != nil) {
                         CategoryLabel(category: self.chosenCategory!, didRemoveCategory: {
                             self.chosenCategory = nil
@@ -68,8 +66,8 @@ struct ThoughtList: View {
                 }
                 .padding(.trailing, 20)
             }
-            .navigationBarTitle("", displayMode: .inline)
-            .navigationBarItems(leading: self.navBarItems)
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
         }
     }
     
