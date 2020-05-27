@@ -74,7 +74,6 @@ struct InteractiveCard: View {
                 
                 // When card is being dragged it should always be on top
                 self.zIndex = 1
-                print(self.inBackgroundFactor)
             }
             .onEnded { value in
                 let cardHiddenYPosition = cardRevealedYPosition + self.yOffset
