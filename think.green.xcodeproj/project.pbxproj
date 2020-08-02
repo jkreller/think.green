@@ -19,14 +19,17 @@
 		21730073243D23F900261575 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21730072243D23F900261575 /* UINavigationControllerExtension.swift */; };
 		2173D38D241B8B4800D978D9 /* SymbolTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2173D38C241B8B4800D978D9 /* SymbolTextStyle.swift */; };
 		2175EB1A243A102A004B77BF /* categoryData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2175EB19243A102A004B77BF /* categoryData.json */; };
-		2175EB1C243A15AC004B77BF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2175EB1B243A15AC004B77BF /* Category.swift */; };
+		2175EB1C243A15AC004B77BF /* ThoughtCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2175EB1B243A15AC004B77BF /* ThoughtCategory.swift */; };
 		217A63B72411BA8B00F3832D /* ThoughtList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217A63B62411BA8B00F3832D /* ThoughtList.swift */; };
 		217A63B92411BAE300F3832D /* ThoughtRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217A63B82411BAE300F3832D /* ThoughtRow.swift */; };
 		217A63BB2411BDCC00F3832D /* ThoughtRowTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217A63BA2411BDCC00F3832D /* ThoughtRowTextStyle.swift */; };
 		217A63BD2411BFC300F3832D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217A63BC2411BFC300F3832D /* BaseView.swift */; };
+		217E275024AFAB6400BA5DE3 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217E274F24AFAB6400BA5DE3 /* CategoriesViewModel.swift */; };
+		217E275924AFAEB200BA5DE3 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217E275824AFAEB200BA5DE3 /* Data.swift */; };
 		21912C1E243D095700F813D5 /* GridStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21912C1D243D095700F813D5 /* GridStack.swift */; };
 		21A893DF2446602A004D52A2 /* CategoryBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A893DE24466029004D52A2 /* CategoryBadge.swift */; };
 		21B79140243A4595002908CE /* CategoryTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B7913F243A4595002908CE /* CategoryTextStyle.swift */; };
+		21C562022482E7B50070A37D /* ParseAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C562012482E7B50070A37D /* ParseAPIClient.swift */; };
 		21C701CB2409B980003C47F0 /* InteractiveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C701CA2409B980003C47F0 /* InteractiveCard.swift */; };
 		21CDC92523C7A5E600A1DA0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CDC92423C7A5E600A1DA0D /* AppDelegate.swift */; };
 		21CDC92723C7A5E600A1DA0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CDC92623C7A5E600A1DA0D /* SceneDelegate.swift */; };
@@ -34,16 +37,18 @@
 		21CDC92E23C7A5EA00A1DA0D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21CDC92D23C7A5EA00A1DA0D /* Preview Assets.xcassets */; };
 		21CDC93123C7A5EA00A1DA0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21CDC92F23C7A5EA00A1DA0D /* LaunchScreen.storyboard */; };
 		21D24EF9242BA9140005E6BC /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D24EF8242BA9140005E6BC /* Categories.swift */; };
+		21E381C6249FBC29004124C2 /* ThoughDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E381C5249FBC29004124C2 /* ThoughDetailViewModel.swift */; };
 		21EAC3AE240E5B3B0048ECC6 /* ThoughtTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EAC3AD240E5B3B0048ECC6 /* ThoughtTitle.swift */; };
 		21EB080623F49BA900965FF2 /* LargeTitleTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB080323F49BA900965FF2 /* LargeTitleTextStyle.swift */; };
 		21EB080723F49BA900965FF2 /* DefaultTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB080423F49BA900965FF2 /* DefaultTextStyle.swift */; };
 		21EB080A23F4A39500965FF2 /* SecondaryTitleTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB080923F4A39500965FF2 /* SecondaryTitleTextStyle.swift */; };
 		21EB080C23F4A3DE00965FF2 /* SecondaryDefaultTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB080B23F4A3DE00965FF2 /* SecondaryDefaultTextStyle.swift */; };
-		21EE86B924123334001677A0 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EE86B824123334001677A0 /* Data.swift */; };
 		21EE86BC241234B0001677A0 /* thoughtData.json in Resources */ = {isa = PBXBuildFile; fileRef = 21EE86BB241234B0001677A0 /* thoughtData.json */; };
+		CBA388E8EFB227D062B645C4 /* Pods_think_green.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5AEEFC5148FFCE96C5D594 /* Pods_think_green.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C56A23F9302DB6A4E87B17E /* Pods-think.green.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-think.green.debug.xcconfig"; path = "Target Support Files/Pods-think.green/Pods-think.green.debug.xcconfig"; sourceTree = "<group>"; };
 		210343E223ECA4BF00F89D85 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		21062F4B242910300054B798 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		211521802447475800137972 /* CategoryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLabel.swift; sourceTree = "<group>"; };
@@ -55,14 +60,17 @@
 		21730072243D23F900261575 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		2173D38C241B8B4800D978D9 /* SymbolTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTextStyle.swift; sourceTree = "<group>"; };
 		2175EB19243A102A004B77BF /* categoryData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = categoryData.json; sourceTree = "<group>"; };
-		2175EB1B243A15AC004B77BF /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		2175EB1B243A15AC004B77BF /* ThoughtCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtCategory.swift; sourceTree = "<group>"; };
 		217A63B62411BA8B00F3832D /* ThoughtList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtList.swift; sourceTree = "<group>"; };
 		217A63B82411BAE300F3832D /* ThoughtRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtRow.swift; sourceTree = "<group>"; };
 		217A63BA2411BDCC00F3832D /* ThoughtRowTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtRowTextStyle.swift; sourceTree = "<group>"; };
 		217A63BC2411BFC300F3832D /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		217E274F24AFAB6400BA5DE3 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		217E275824AFAEB200BA5DE3 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		21912C1D243D095700F813D5 /* GridStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridStack.swift; sourceTree = "<group>"; };
 		21A893DE24466029004D52A2 /* CategoryBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryBadge.swift; sourceTree = "<group>"; };
 		21B7913F243A4595002908CE /* CategoryTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTextStyle.swift; sourceTree = "<group>"; };
+		21C562012482E7B50070A37D /* ParseAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseAPIClient.swift; sourceTree = "<group>"; };
 		21C701CA2409B980003C47F0 /* InteractiveCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveCard.swift; sourceTree = "<group>"; };
 		21CDC92123C7A5E600A1DA0D /* think.green.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = think.green.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21CDC92423C7A5E600A1DA0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,13 +80,15 @@
 		21CDC93023C7A5EA00A1DA0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21CDC93223C7A5EA00A1DA0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21D24EF8242BA9140005E6BC /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		21E381C5249FBC29004124C2 /* ThoughDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughDetailViewModel.swift; sourceTree = "<group>"; };
 		21EAC3AD240E5B3B0048ECC6 /* ThoughtTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtTitle.swift; sourceTree = "<group>"; };
 		21EB080323F49BA900965FF2 /* LargeTitleTextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeTitleTextStyle.swift; sourceTree = "<group>"; };
 		21EB080423F49BA900965FF2 /* DefaultTextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTextStyle.swift; sourceTree = "<group>"; };
 		21EB080923F4A39500965FF2 /* SecondaryTitleTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryTitleTextStyle.swift; sourceTree = "<group>"; };
 		21EB080B23F4A3DE00965FF2 /* SecondaryDefaultTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryDefaultTextStyle.swift; sourceTree = "<group>"; };
-		21EE86B824123334001677A0 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		21EE86BB241234B0001677A0 /* thoughtData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = thoughtData.json; sourceTree = "<group>"; };
+		2966DCAE43563C8BFF827504 /* Pods-think.green.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-think.green.release.xcconfig"; path = "Target Support Files/Pods-think.green/Pods-think.green.release.xcconfig"; sourceTree = "<group>"; };
+		EF5AEEFC5148FFCE96C5D594 /* Pods_think_green.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_think_green.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,18 +97,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				21062F4F242A98510054B798 /* NavigationStack in Frameworks */,
+				CBA388E8EFB227D062B645C4 /* Pods_think_green.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0142DAC7193491145E0429C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C56A23F9302DB6A4E87B17E /* Pods-think.green.debug.xcconfig */,
+				2966DCAE43563C8BFF827504 /* Pods-think.green.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		21022F7923DA4D2300E59A0F /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				213FE27623DB79F9005BD8C8 /* Thought.swift */,
-				2175EB1B243A15AC004B77BF /* Category.swift */,
-				21EE86B824123334001677A0 /* Data.swift */,
+				2175EB1B243A15AC004B77BF /* ThoughtCategory.swift */,
+				217E275824AFAEB200BA5DE3 /* Data.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -112,7 +132,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		211814AA23FD23DA000BD722 /* Supporting Views */ = {
+		211814AA23FD23DA000BD722 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				211814A823FD2353000BD722 /* Card.swift */,
@@ -124,7 +144,15 @@
 				21A893DE24466029004D52A2 /* CategoryBadge.swift */,
 				211521802447475800137972 /* CategoryLabel.swift */,
 			);
-			path = "Supporting Views";
+			path = Components;
+			sourceTree = "<group>";
+		};
+		21C562002482E79E0070A37D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				21C562012482E7B50070A37D /* ParseAPIClient.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		21CDC91823C7A5E600A1DA0D = {
@@ -132,6 +160,8 @@
 			children = (
 				21CDC92323C7A5E600A1DA0D /* think.green */,
 				21CDC92223C7A5E600A1DA0D /* Products */,
+				0142DAC7193491145E0429C0 /* Pods */,
+				4BEB83A7B812F90CBA555E42 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,15 +176,12 @@
 		21CDC92323C7A5E600A1DA0D /* think.green */ = {
 			isa = PBXGroup;
 			children = (
+				21C562002482E79E0070A37D /* API */,
 				21EB080223F49BA900965FF2 /* TextStyles */,
 				210343E123ECA49800F89D85 /* Extensions */,
 				21022F7923DA4D2300E59A0F /* Models */,
-				211814AA23FD23DA000BD722 /* Supporting Views */,
-				217A63BC2411BFC300F3832D /* BaseView.swift */,
-				21687633242BE8A400B36395 /* MainView.swift */,
-				21CDC92823C7A5E600A1DA0D /* ThoughtDetail.swift */,
-				217A63B62411BA8B00F3832D /* ThoughtList.swift */,
-				21D24EF8242BA9140005E6BC /* Categories.swift */,
+				21E381C3249FBBA0004124C2 /* ViewModels */,
+				21E381C4249FBBB9004124C2 /* Views */,
 				21CDC92423C7A5E600A1DA0D /* AppDelegate.swift */,
 				21CDC92623C7A5E600A1DA0D /* SceneDelegate.swift */,
 				21659831240F0BE700BAFC10 /* HostingController.swift */,
@@ -173,6 +200,28 @@
 				21CDC92D23C7A5EA00A1DA0D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		21E381C3249FBBA0004124C2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				21E381C5249FBC29004124C2 /* ThoughDetailViewModel.swift */,
+				217E274F24AFAB6400BA5DE3 /* CategoriesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		21E381C4249FBBB9004124C2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				211814AA23FD23DA000BD722 /* Components */,
+				217A63BC2411BFC300F3832D /* BaseView.swift */,
+				21687633242BE8A400B36395 /* MainView.swift */,
+				21CDC92823C7A5E600A1DA0D /* ThoughtDetail.swift */,
+				217A63B62411BA8B00F3832D /* ThoughtList.swift */,
+				21D24EF8242BA9140005E6BC /* Categories.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		21EB080223F49BA900965FF2 /* TextStyles */ = {
@@ -198,6 +247,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		4BEB83A7B812F90CBA555E42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF5AEEFC5148FFCE96C5D594 /* Pods_think_green.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21CDC93523C7A5EA00A1DA0D /* Build configuration list for PBXNativeTarget "think.green" */;
 			buildPhases = (
+				2B90804C3A1F2DAF80FF8F73 /* [CP] Check Pods Manifest.lock */,
 				21CDC91D23C7A5E600A1DA0D /* Sources */,
 				21CDC91E23C7A5E600A1DA0D /* Frameworks */,
 				21CDC91F23C7A5E600A1DA0D /* Resources */,
+				EB2B4954E21D6A0644DEEE5F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -272,6 +331,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B90804C3A1F2DAF80FF8F73 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-think.green-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB2B4954E21D6A0644DEEE5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-think.green/Pods-think.green-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-think.green/Pods-think.green-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-think.green/Pods-think.green-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		21CDC91D23C7A5E600A1DA0D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -280,6 +381,7 @@
 				21A893DF2446602A004D52A2 /* CategoryBadge.swift in Sources */,
 				21CDC92523C7A5E600A1DA0D /* AppDelegate.swift in Sources */,
 				21EB080723F49BA900965FF2 /* DefaultTextStyle.swift in Sources */,
+				21C562022482E7B50070A37D /* ParseAPIClient.swift in Sources */,
 				21CDC92723C7A5E600A1DA0D /* SceneDelegate.swift in Sources */,
 				217A63BD2411BFC300F3832D /* BaseView.swift in Sources */,
 				21CDC92923C7A5E600A1DA0D /* ThoughtDetail.swift in Sources */,
@@ -287,17 +389,19 @@
 				21659832240F0BE700BAFC10 /* HostingController.swift in Sources */,
 				21B79140243A4595002908CE /* CategoryTextStyle.swift in Sources */,
 				21687634242BE8A400B36395 /* MainView.swift in Sources */,
-				21EE86B924123334001677A0 /* Data.swift in Sources */,
 				21D24EF9242BA9140005E6BC /* Categories.swift in Sources */,
 				21EB080C23F4A3DE00965FF2 /* SecondaryDefaultTextStyle.swift in Sources */,
+				217E275924AFAEB200BA5DE3 /* Data.swift in Sources */,
+				21E381C6249FBC29004124C2 /* ThoughDetailViewModel.swift in Sources */,
 				21EB080A23F4A39500965FF2 /* SecondaryTitleTextStyle.swift in Sources */,
 				211814A923FD2353000BD722 /* Card.swift in Sources */,
 				21C701CB2409B980003C47F0 /* InteractiveCard.swift in Sources */,
 				21730073243D23F900261575 /* UINavigationControllerExtension.swift in Sources */,
 				21912C1E243D095700F813D5 /* GridStack.swift in Sources */,
-				2175EB1C243A15AC004B77BF /* Category.swift in Sources */,
+				2175EB1C243A15AC004B77BF /* ThoughtCategory.swift in Sources */,
 				210343E323ECA4BF00F89D85 /* ColorExtension.swift in Sources */,
 				211521812447475800137972 /* CategoryLabel.swift in Sources */,
+				217E275024AFAB6400BA5DE3 /* CategoriesViewModel.swift in Sources */,
 				217A63B72411BA8B00F3832D /* ThoughtList.swift in Sources */,
 				21EAC3AE240E5B3B0048ECC6 /* ThoughtTitle.swift in Sources */,
 				2173D38D241B8B4800D978D9 /* SymbolTextStyle.swift in Sources */,
@@ -438,6 +542,7 @@
 		};
 		21CDC93623C7A5EA00A1DA0D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C56A23F9302DB6A4E87B17E /* Pods-think.green.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -459,6 +564,7 @@
 		};
 		21CDC93723C7A5EA00A1DA0D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2966DCAE43563C8BFF827504 /* Pods-think.green.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

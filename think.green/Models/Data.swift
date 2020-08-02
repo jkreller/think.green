@@ -1,6 +1,6 @@
+  
 /*
 See LICENSE folder for this sample’s licensing information.
-
 Abstract:
 Helpers for loading images and data.
 */
@@ -9,27 +9,23 @@ import UIKit
 import SwiftUI
 import CoreLocation
 
-let thoughtData: [Thought] = load("thoughtData.json")
-let categoryData: [Category] = load("categoryData.json")
+let categoryData: [ThoughtCategory] = getThoughtCategories()
+let thoughtData: [Thought] = getThoughts(thoughtCategories: categoryData)
 
-func load<T: Decodable>(_ filename: String) -> T {
-    let data: Data
+func getThoughts(thoughtCategories: [ThoughtCategory]) -> [Thought] {
+    let thought1 = Thought()
+    thought1.title = "Test"
+    thought1.whatText = "Test Test"
+    thought1.whyText = "Because"
+    thought1.category = thoughtCategories[0]
     
-    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-        else {
-            fatalError("Couldn't find \(filename) in main bundle.")
-    }
-    
-    do {
-        data = try Data(contentsOf: file)
-    } catch {
-        fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
-    }
-    
-    do {
-        let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: data)
-    } catch {
-        fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
-    }
+    return [thought1]
 }
+
+func getThoughtCategories() -> [ThoughtCategory] {
+    let thoughtCategory1 = ThoughtCategory()
+    thoughtCategory1.name = "Testcategory"
+    
+    return [thoughtCategory1]
+}
+

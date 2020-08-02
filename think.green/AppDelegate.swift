@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let parseConfig = ParseClientConfiguration {
+            $0.applicationId = "think.green"
+            //$0.clientKey = "parseClientKey"
+            $0.server = "http://localhost:1337/parse"
+        }
+        Parse.initialize(with: parseConfig)
         return true
     }
 
