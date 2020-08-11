@@ -48,7 +48,7 @@ struct InteractiveCard: View {
         TapGesture(count: 1)
             .onEnded { _ in
                 // Only allow tap if card is not in background
-                if (self.inBackgroundFactor == 0) {
+                if self.inBackgroundFactor == 0 {
                     //self.isRevealed.toggle()
                     self.revealFactor = self.revealFactor == 0 ? 1 : 0
                     self.setZIndex(delayed: true)
@@ -58,16 +58,16 @@ struct InteractiveCard: View {
     
     func getDrag(cardRevealedYPosition: CGFloat) -> some Gesture {
         // Only allow drag if card is not in background
-        if (self.inBackgroundFactor == 0) {
+        if self.inBackgroundFactor == 0 {
             return DragGesture(coordinateSpace: .global)
             .onChanged { value in
                 // Normalize drag translation height according to cards y-offset: 0 -> drag start; 1 -> card is revealed; -1 -> card is hidden
                 let normalizedTranslationHeight = -(value.translation.height / self.yOffset)
 
-                if (normalizedTranslationHeight > 0 && self.revealFactor < 1) {
+                if normalizedTranslationHeight > 0 && self.revealFactor < 1 {
                     // If direction of drag is upwards and card is hidden
                     self.revealFactor = normalizedTranslationHeight
-                } else if (normalizedTranslationHeight < 0 && self.revealFactor > 0) {
+                } else if normalizedTranslationHeight < 0 && self.revealFactor > 0 {
                     // If direction of drag is downwards and card is revealed
                     self.revealFactor = 1 + normalizedTranslationHeight
                 }
@@ -78,10 +78,10 @@ struct InteractiveCard: View {
             .onEnded { value in
                 let cardHiddenYPosition = cardRevealedYPosition + self.yOffset
                 
-                if (self.revealFactor < 1 && value.predictedEndLocation.y <= cardRevealedYPosition) {
+                if self.revealFactor < 1 && value.predictedEndLocation.y <= cardRevealedYPosition {
                     // If card would be dragged farther then relvealed position then reveal
                     self.revealFactor = 1
-                } else if (value.predictedEndLocation.y >= cardHiddenYPosition) {
+                } else if value.predictedEndLocation.y >= cardHiddenYPosition {
                     // If card would be dragged farther then hidden position then hide
                     self.revealFactor = 0
                 }
@@ -101,9 +101,9 @@ struct InteractiveCard: View {
     // Set z-index according to reveal-status
     // Optional: setting to 0 can be delayed by cardAnimationDuration seconds
     func setZIndex(delayed: Bool = false) {
-        if (self.revealFactor == 1) {
+        if self.revealFactor == 1 {
             self.zIndex = 1
-        } else if (delayed) {
+        } else if delayed {
             // Delay setting of zIndex by cardAnimationDuration to avoid wrong overlay order when moving cards
             DispatchQueue.main.asyncAfter(deadline: .now() + self.cardAnimationDuration) {
                 self.zIndex = 0
@@ -141,8 +141,8 @@ struct InteractiveCard: View {
     }
 }
 
-struct InteractiveCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        ThoughtDetail(thought: thoughtData[2])
-    }
-}
+//struct InteractiveCardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ThoughtDetail(thought: thoughtData[2])
+//    }
+//}

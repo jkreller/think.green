@@ -8,14 +8,11 @@
 
 import SwiftUI
 
-struct Thought: Hashable, Decodable, Identifiable {
-    var id: Int
+struct Thought: Codable, Identifiable {
+    let id: Int
     let title: String
     let description: String
     let reason: String
-    fileprivate var imageName: String
-    var categoryId: Int
-    var image: Image {
-        Image(self.imageName)
-    }
+    let category: ThoughtCategory
+    let image: StrapiImage
 }

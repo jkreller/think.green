@@ -34,14 +34,14 @@ struct Card: View {
     }
 }
 
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        ForEach(["iPhone 6s", "iPhone 11"], id: \.self) { deviceName in
-            Card(title: "What?", content: thoughtData[3].description)
-                .previewLayout(.sizeThatFits)
-                .previewDevice(PreviewDevice(rawValue: deviceName))
-                .previewDisplayName(deviceName)
-                .padding()
-        }
-    }
-}
+//struct CardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ForEach(["iPhone 6s", "iPhone 11"], id: \.self) { deviceName in
+//            Card(title: "What?", content: thoughtData[3].description)
+//                .previewLayout(.sizeThatFits)
+//                .previewDevice(PreviewDevice(rawValue: deviceName))
+//                .previewDisplayName(deviceName)
+//                .padding()
+//        }
+//    }
+//}

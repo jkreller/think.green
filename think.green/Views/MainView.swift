@@ -10,12 +10,12 @@ import SwiftUI
 
 struct MainView: View {
     @State var showCategories = false
-    @State var chosenCategory: Category?
+    @State var chosenCategory: ThoughtCategory?
     
     var body: some View {
         ZStack {
             GeometryReader { geometry in
-                ThoughtList(showCategories: self.$showCategories, chosenCategory: self.$chosenCategory, firstThoughtId: 1001)
+                ThoughtList(showCategories: self.$showCategories, chosenCategory: self.$chosenCategory, firstThoughtId: 1)
                     .offset(x: self.showCategories ? geometry.size.width : 0)
                 Categories(showCategories: self.$showCategories, chosenCategory: self.$chosenCategory)
                     .offset(x: self.showCategories ? 0 : -geometry.size.width)

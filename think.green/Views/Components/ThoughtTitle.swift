@@ -9,15 +9,13 @@
 import SwiftUI
 
 struct ThoughtTitle: View {
-    var image: Image
+    var imageURL: String
     var title: String
     @Binding var titleHeight: CGFloat
     
     var body: some View {
         VStack {
-            self.image
-                .resizable()
-                .aspectRatio(contentMode: .fit)
+            ImageView(from: imageURL)
                 .frame(height: 100)
                 .padding(.zero)
 
@@ -35,8 +33,8 @@ struct ThoughtTitle: View {
     }
 }
 
-struct ThoughtTitleView_Previews: PreviewProvider {
-    static var previews: some View {
-        ThoughtDetail(thought: thoughtData[3])
-    }
-}
+//struct ThoughtTitleView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ThoughtDetail(thought: thoughtData[3])
+//    }
+//}

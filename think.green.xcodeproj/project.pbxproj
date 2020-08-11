@@ -13,13 +13,13 @@
 		211521812447475800137972 /* CategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211521802447475800137972 /* CategoryLabel.swift */; };
 		211814A723FD1F29000BD722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211814A623FD1F29000BD722 /* Assets.xcassets */; };
 		211814A923FD2353000BD722 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211814A823FD2353000BD722 /* Card.swift */; };
+		211B988C24E1DD36001EDDDF /* StrapiAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211B988B24E1DD36001EDDDF /* StrapiAPIClient.swift */; };
 		213FE27723DB79F9005BD8C8 /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213FE27623DB79F9005BD8C8 /* Thought.swift */; };
 		21659832240F0BE700BAFC10 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21659831240F0BE700BAFC10 /* HostingController.swift */; };
 		21687634242BE8A400B36395 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21687633242BE8A400B36395 /* MainView.swift */; };
 		21730073243D23F900261575 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21730072243D23F900261575 /* UINavigationControllerExtension.swift */; };
 		2173D38D241B8B4800D978D9 /* SymbolTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2173D38C241B8B4800D978D9 /* SymbolTextStyle.swift */; };
-		2175EB1A243A102A004B77BF /* categoryData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2175EB19243A102A004B77BF /* categoryData.json */; };
-		2175EB1C243A15AC004B77BF /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2175EB1B243A15AC004B77BF /* Category.swift */; };
+		2175EB1C243A15AC004B77BF /* ThoughtCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2175EB1B243A15AC004B77BF /* ThoughtCategory.swift */; };
 		217A63B72411BA8B00F3832D /* ThoughtList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217A63B62411BA8B00F3832D /* ThoughtList.swift */; };
 		217A63B92411BAE300F3832D /* ThoughtRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217A63B82411BAE300F3832D /* ThoughtRow.swift */; };
 		217A63BB2411BDCC00F3832D /* ThoughtRowTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217A63BA2411BDCC00F3832D /* ThoughtRowTextStyle.swift */; };
@@ -39,8 +39,11 @@
 		21EB080723F49BA900965FF2 /* DefaultTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB080423F49BA900965FF2 /* DefaultTextStyle.swift */; };
 		21EB080A23F4A39500965FF2 /* SecondaryTitleTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB080923F4A39500965FF2 /* SecondaryTitleTextStyle.swift */; };
 		21EB080C23F4A3DE00965FF2 /* SecondaryDefaultTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EB080B23F4A3DE00965FF2 /* SecondaryDefaultTextStyle.swift */; };
-		21EE86B924123334001677A0 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EE86B824123334001677A0 /* Data.swift */; };
-		21EE86BC241234B0001677A0 /* thoughtData.json in Resources */ = {isa = PBXBuildFile; fileRef = 21EE86BB241234B0001677A0 /* thoughtData.json */; };
+		21F2815124E1E5B8009B7ACD /* ThoughtListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F2815024E1E5B8009B7ACD /* ThoughtListViewModel.swift */; };
+		21F2815324E1F463009B7ACD /* StrapiImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F2815224E1F463009B7ACD /* StrapiImage.swift */; };
+		21F2815724E1FD91009B7ACD /* StrapiAPIImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F2815624E1FD91009B7ACD /* StrapiAPIImageLoader.swift */; };
+		21F2815924E1FE42009B7ACD /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F2815824E1FE42009B7ACD /* ImageView.swift */; };
+		21F2815B24E206C6009B7ACD /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F2815A24E206C6009B7ACD /* CategoriesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,13 +52,13 @@
 		211521802447475800137972 /* CategoryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLabel.swift; sourceTree = "<group>"; };
 		211814A623FD1F29000BD722 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		211814A823FD2353000BD722 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		211B988B24E1DD36001EDDDF /* StrapiAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrapiAPIClient.swift; sourceTree = "<group>"; };
 		213FE27623DB79F9005BD8C8 /* Thought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thought.swift; sourceTree = "<group>"; };
 		21659831240F0BE700BAFC10 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 		21687633242BE8A400B36395 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		21730072243D23F900261575 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		2173D38C241B8B4800D978D9 /* SymbolTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolTextStyle.swift; sourceTree = "<group>"; };
-		2175EB19243A102A004B77BF /* categoryData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = categoryData.json; sourceTree = "<group>"; };
-		2175EB1B243A15AC004B77BF /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		2175EB1B243A15AC004B77BF /* ThoughtCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtCategory.swift; sourceTree = "<group>"; };
 		217A63B62411BA8B00F3832D /* ThoughtList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtList.swift; sourceTree = "<group>"; };
 		217A63B82411BAE300F3832D /* ThoughtRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtRow.swift; sourceTree = "<group>"; };
 		217A63BA2411BDCC00F3832D /* ThoughtRowTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtRowTextStyle.swift; sourceTree = "<group>"; };
@@ -77,8 +80,11 @@
 		21EB080423F49BA900965FF2 /* DefaultTextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTextStyle.swift; sourceTree = "<group>"; };
 		21EB080923F4A39500965FF2 /* SecondaryTitleTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryTitleTextStyle.swift; sourceTree = "<group>"; };
 		21EB080B23F4A3DE00965FF2 /* SecondaryDefaultTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryDefaultTextStyle.swift; sourceTree = "<group>"; };
-		21EE86B824123334001677A0 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		21EE86BB241234B0001677A0 /* thoughtData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = thoughtData.json; sourceTree = "<group>"; };
+		21F2815024E1E5B8009B7ACD /* ThoughtListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtListViewModel.swift; sourceTree = "<group>"; };
+		21F2815224E1F463009B7ACD /* StrapiImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrapiImage.swift; sourceTree = "<group>"; };
+		21F2815624E1FD91009B7ACD /* StrapiAPIImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrapiAPIImageLoader.swift; sourceTree = "<group>"; };
+		21F2815824E1FE42009B7ACD /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		21F2815A24E206C6009B7ACD /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				213FE27623DB79F9005BD8C8 /* Thought.swift */,
-				2175EB1B243A15AC004B77BF /* Category.swift */,
-				21EE86B824123334001677A0 /* Data.swift */,
+				2175EB1B243A15AC004B77BF /* ThoughtCategory.swift */,
+				21F2815224E1F463009B7ACD /* StrapiImage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -112,7 +118,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		211814AA23FD23DA000BD722 /* Supporting Views */ = {
+		211814AA23FD23DA000BD722 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				211814A823FD2353000BD722 /* Card.swift */,
@@ -123,8 +129,40 @@
 				21912C1D243D095700F813D5 /* GridStack.swift */,
 				21A893DE24466029004D52A2 /* CategoryBadge.swift */,
 				211521802447475800137972 /* CategoryLabel.swift */,
+				21F2815824E1FE42009B7ACD /* ImageView.swift */,
 			);
-			path = "Supporting Views";
+			path = Components;
+			sourceTree = "<group>";
+		};
+		211B988A24E1DD17001EDDDF /* StrapiAPI */ = {
+			isa = PBXGroup;
+			children = (
+				211B988B24E1DD36001EDDDF /* StrapiAPIClient.swift */,
+				21F2815624E1FD91009B7ACD /* StrapiAPIImageLoader.swift */,
+			);
+			path = StrapiAPI;
+			sourceTree = "<group>";
+		};
+		211B988D24E1DD6E001EDDDF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				21F2815024E1E5B8009B7ACD /* ThoughtListViewModel.swift */,
+				21F2815A24E206C6009B7ACD /* CategoriesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2139A27724E1DF1B00FC493C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				211814AA23FD23DA000BD722 /* Components */,
+				217A63BC2411BFC300F3832D /* BaseView.swift */,
+				21687633242BE8A400B36395 /* MainView.swift */,
+				21CDC92823C7A5E600A1DA0D /* ThoughtDetail.swift */,
+				217A63B62411BA8B00F3832D /* ThoughtList.swift */,
+				21D24EF8242BA9140005E6BC /* Categories.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		21CDC91823C7A5E600A1DA0D = {
@@ -146,21 +184,17 @@
 		21CDC92323C7A5E600A1DA0D /* think.green */ = {
 			isa = PBXGroup;
 			children = (
+				2139A27724E1DF1B00FC493C /* Views */,
+				211B988D24E1DD6E001EDDDF /* ViewModels */,
+				21022F7923DA4D2300E59A0F /* Models */,
+				211B988A24E1DD17001EDDDF /* StrapiAPI */,
 				21EB080223F49BA900965FF2 /* TextStyles */,
 				210343E123ECA49800F89D85 /* Extensions */,
-				21022F7923DA4D2300E59A0F /* Models */,
-				211814AA23FD23DA000BD722 /* Supporting Views */,
-				217A63BC2411BFC300F3832D /* BaseView.swift */,
-				21687633242BE8A400B36395 /* MainView.swift */,
-				21CDC92823C7A5E600A1DA0D /* ThoughtDetail.swift */,
-				217A63B62411BA8B00F3832D /* ThoughtList.swift */,
-				21D24EF8242BA9140005E6BC /* Categories.swift */,
 				21CDC92423C7A5E600A1DA0D /* AppDelegate.swift */,
 				21CDC92623C7A5E600A1DA0D /* SceneDelegate.swift */,
 				21659831240F0BE700BAFC10 /* HostingController.swift */,
 				21CDC92F23C7A5EA00A1DA0D /* LaunchScreen.storyboard */,
 				21CDC93223C7A5EA00A1DA0D /* Info.plist */,
-				21EE86BA24123485001677A0 /* Resources */,
 				211814A623FD1F29000BD722 /* Assets.xcassets */,
 				21CDC92C23C7A5EA00A1DA0D /* Preview Content */,
 			);
@@ -187,15 +221,6 @@
 				21B7913F243A4595002908CE /* CategoryTextStyle.swift */,
 			);
 			path = TextStyles;
-			sourceTree = "<group>";
-		};
-		21EE86BA24123485001677A0 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				21EE86BB241234B0001677A0 /* thoughtData.json */,
-				2175EB19243A102A004B77BF /* categoryData.json */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +288,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				21CDC93123C7A5EA00A1DA0D /* LaunchScreen.storyboard in Resources */,
-				21EE86BC241234B0001677A0 /* thoughtData.json in Resources */,
-				2175EB1A243A102A004B77BF /* categoryData.json in Resources */,
 				211814A723FD1F29000BD722 /* Assets.xcassets in Resources */,
 				21CDC92E23C7A5EA00A1DA0D /* Preview Assets.xcassets in Resources */,
 			);
@@ -279,29 +302,34 @@
 			files = (
 				21A893DF2446602A004D52A2 /* CategoryBadge.swift in Sources */,
 				21CDC92523C7A5E600A1DA0D /* AppDelegate.swift in Sources */,
+				21F2815324E1F463009B7ACD /* StrapiImage.swift in Sources */,
 				21EB080723F49BA900965FF2 /* DefaultTextStyle.swift in Sources */,
 				21CDC92723C7A5E600A1DA0D /* SceneDelegate.swift in Sources */,
+				21F2815724E1FD91009B7ACD /* StrapiAPIImageLoader.swift in Sources */,
 				217A63BD2411BFC300F3832D /* BaseView.swift in Sources */,
+				211B988C24E1DD36001EDDDF /* StrapiAPIClient.swift in Sources */,
 				21CDC92923C7A5E600A1DA0D /* ThoughtDetail.swift in Sources */,
 				213FE27723DB79F9005BD8C8 /* Thought.swift in Sources */,
+				21F2815B24E206C6009B7ACD /* CategoriesViewModel.swift in Sources */,
 				21659832240F0BE700BAFC10 /* HostingController.swift in Sources */,
 				21B79140243A4595002908CE /* CategoryTextStyle.swift in Sources */,
 				21687634242BE8A400B36395 /* MainView.swift in Sources */,
-				21EE86B924123334001677A0 /* Data.swift in Sources */,
 				21D24EF9242BA9140005E6BC /* Categories.swift in Sources */,
+				21F2815924E1FE42009B7ACD /* ImageView.swift in Sources */,
 				21EB080C23F4A3DE00965FF2 /* SecondaryDefaultTextStyle.swift in Sources */,
 				21EB080A23F4A39500965FF2 /* SecondaryTitleTextStyle.swift in Sources */,
 				211814A923FD2353000BD722 /* Card.swift in Sources */,
 				21C701CB2409B980003C47F0 /* InteractiveCard.swift in Sources */,
 				21730073243D23F900261575 /* UINavigationControllerExtension.swift in Sources */,
 				21912C1E243D095700F813D5 /* GridStack.swift in Sources */,
-				2175EB1C243A15AC004B77BF /* Category.swift in Sources */,
+				2175EB1C243A15AC004B77BF /* ThoughtCategory.swift in Sources */,
 				210343E323ECA4BF00F89D85 /* ColorExtension.swift in Sources */,
 				211521812447475800137972 /* CategoryLabel.swift in Sources */,
 				217A63B72411BA8B00F3832D /* ThoughtList.swift in Sources */,
 				21EAC3AE240E5B3B0048ECC6 /* ThoughtTitle.swift in Sources */,
 				2173D38D241B8B4800D978D9 /* SymbolTextStyle.swift in Sources */,
 				217A63BB2411BDCC00F3832D /* ThoughtRowTextStyle.swift in Sources */,
+				21F2815124E1E5B8009B7ACD /* ThoughtListViewModel.swift in Sources */,
 				21062F4C242910300054B798 /* SearchBar.swift in Sources */,
 				21EB080623F49BA900965FF2 /* LargeTitleTextStyle.swift in Sources */,
 				217A63B92411BAE300F3832D /* ThoughtRow.swift in Sources */,
