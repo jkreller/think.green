@@ -10,13 +10,9 @@ The key principles of *think.green* are:
 *think.green* was brought to life to learn Swift UI for myself but also creating a valuable app that helps people.
 
 ## Roadmap
-Q1 2020: Start development of UI  
-Q3 2020: Evaluate and add backend (headless CMS)  
-Q4 2020: Populate information and go live
-
-2021:
+* Evaluate and add backend (headless CMS)
+* Populate information and go live
 * Allow contributions
 * Feature development
-
 
 **&copy; Julian Kreller | think.green 2020**
