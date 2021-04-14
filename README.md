@@ -15,4 +15,4 @@ The key principles of *think.green* are:
 * Allow contributions
 * Feature development
 
-**&copy; Julian Kreller | think.green 2020**
+**&copy; Julian Kreller | think.green 2021**
