@@ -9,6 +9,8 @@ The key principles of *think.green* are:
 
 *think.green* was brought to life to learn Swift UI for myself but also creating a valuable app that helps people.
 
+[Visit the website.](https://think-green.app)
+
 ## Roadmap
 * Evaluate and add backend (headless CMS)
 * Populate information and go live
