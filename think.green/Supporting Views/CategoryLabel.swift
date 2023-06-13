@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct CategoryLabel: View {
-    var category: ThoughtCategory
+    var category: Category
     var didRemoveCategory: () -> Void
 
     var body: some View {
@@ -28,11 +28,11 @@ struct CategoryLabel: View {
     }
 }
 
-//struct CategoryLabel_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CategoryLabel(category: categoryData[0], didRemoveCategory: {})
-//            .previewLayout(.sizeThatFits)
-//            .padding()
-//            .background(Color.background)
-//    }
-//}
+struct CategoryLabel_Previews: PreviewProvider {
+    static var previews: some View {
+        CategoryLabel(category: categoryData[0], didRemoveCategory: {})
+            .previewLayout(.sizeThatFits)
+            .padding()
+            .background(Color.background)
+    }
+}

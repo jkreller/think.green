@@ -37,7 +37,7 @@ struct ThoughtDetail: View {
             BaseView {
                 GeometryReader { geometry in
                     VStack {
-                        ThoughtTitle(imageURL: self.thought.image.url, title: self.thought.title, titleHeight: self.$titleHeight)
+                        ThoughtTitle(image: self.thought.image, title: self.thought.title, titleHeight: self.$titleHeight)
                             // Set scale effect to decrease size according to what-card drag
                             .scaleEffect(1 - (0.2 * self.whatCardDragFactor), anchor: .bottom)
                             .animation(.easeOut)
@@ -78,7 +78,7 @@ struct ThoughtDetail: View {
     // For card offset a distinction between devices with and without notch has to be made (because of status bar safe area)
     func calculateCardOffset(cardHeight: CGFloat, availableSpace: CGFloat) -> CGFloat {
         var availableSpace: CGFloat = availableSpace
-        if UIDevice.current.hasNotch {
+        if (UIDevice.current.hasNotch) {
             // If screen has notch use total screen height
             availableSpace = UIScreen.main.bounds.height + InteractiveCard.cardHeaderHeight
         }
@@ -98,8 +98,8 @@ extension UIDevice {
     }
 }
 
-//struct ThoughtDetail_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ThoughtDetail(thought: thoughtData[4])
-//    }
-//}
+struct ThoughtDetail_Previews: PreviewProvider {
+    static var previews: some View {
+        ThoughtDetail(thought: thoughtData[4])
+    }
+}

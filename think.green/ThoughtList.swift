@@ -9,17 +9,13 @@
 import SwiftUI
 
 struct ThoughtList: View {
-    // Data
-    @ObservedObject var viewModel = ThoughtListViewModel()
-    
-    // Animation
     @Binding var showCategories: Bool
-    @Binding var chosenCategory: ThoughtCategory?
+    @Binding var chosenCategory: Category?
     var firstThoughtId: Int? = nil
     @State var searchText: String = ""
     @State var isActiveFirstThought = true
     
-    init(showCategories: Binding<Bool>, chosenCategory: Binding<ThoughtCategory?>, firstThoughtId: Int? = nil) {
+    init(showCategories: Binding<Bool>, chosenCategory: Binding<Category?>, firstThoughtId: Int? = nil) {
         // Make table view background transparent, seperator white and disable tap color
         UITableView.appearance().backgroundColor = .clear
         UITableViewCell.appearance().backgroundColor = .clear
@@ -32,7 +28,7 @@ struct ThoughtList: View {
     }
     
     var body: some View {
-        NavigationView {
+         NavigationView {
             BaseView {
                 VStack(alignment: .trailing, spacing: 0) {
                     HStack {
@@ -47,15 +43,15 @@ struct ThoughtList: View {
                         SearchBar(text: self.$searchText)
                             .frame(width: UIScreen.main.bounds.width - 70)
                     }
-        
-                    if self.chosenCategory != nil {
+                    
+                    if (self.chosenCategory != nil) {
                         CategoryLabel(category: self.chosenCategory!, didRemoveCategory: {
                             self.chosenCategory = nil
                         }).padding(.top, 10)
                     }
-        
-                    List(self.viewModel.thoughts.filter(self.filterThoughts)) { thought in
-                        if self.firstThoughtId != nil && thought.id == self.firstThoughtId {
+                    
+                    List(thoughtData.filter(self.filterThoughts)) { thought in
+                        if (self.firstThoughtId != nil && thought.id == self.firstThoughtId) {
                             // Call NavigationLink with isActive true for immediately switching to first thought
                             NavigationLink(destination: ThoughtDetail(thought: thought), isActive: self.$isActiveFirstThought) {
                                 ThoughtRow(thought: thought)
@@ -80,15 +76,15 @@ struct ThoughtList: View {
         let lowercasedSearchText = self.searchText.lowercased()
         
         // If category is selected try to match thought category id with chodes category id, otherwise set to true
-        let matchesCategory = self.chosenCategory == nil || thought.category.id == self.chosenCategory!.id
+        let matchesCategory = self.chosenCategory == nil || thought.categoryId == self.chosenCategory!.id
         
         // Select thought if search text empty and category matches or if search text is not empty, thought title contains search text and category matches
         return (self.searchText.isEmpty || lowercasedTitle.contains(lowercasedSearchText)) && matchesCategory
     }
 }
 
-//struct ThoughtList_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ThoughtList(showCategories: .constant(false), chosenCategory: .constant(categoryData[0]))
-//    }
-//}
+struct ThoughtList_Previews: PreviewProvider {
+    static var previews: some View {
+        ThoughtList(showCategories: .constant(false), chosenCategory: .constant(categoryData[0]))
+    }
+}

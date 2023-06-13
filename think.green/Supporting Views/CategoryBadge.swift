@@ -11,14 +11,16 @@ import SwiftUI
 struct CategoryBadge: View {
     let frameFactor: CGFloat = 0.31
     
-    var category: ThoughtCategory
+    var category: Category
     var parentWidth: CGFloat
     var onTap: () -> Void
     
     var body: some View {
         Button (action: self.onTap) {
             VStack(spacing: 5) {
-                ImageView(from: category.image.url)
+                self.category.image
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
                     .frame(height: parentWidth * 0.13)
                 Text(self.category.name)
             }

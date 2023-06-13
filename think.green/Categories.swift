@@ -10,12 +10,8 @@ import SwiftUI
 import Foundation
 
 struct Categories: View {
-    // Data
-    @ObservedObject var viewModel = CategoriesViewModel()
-    
-    // Animation
     @Binding var showCategories: Bool
-    @Binding var chosenCategory: ThoughtCategory?
+    @Binding var chosenCategory: Category?
     
     var navBarItems: some View {
         Button(action: self.hideCategories) {
@@ -29,14 +25,14 @@ struct Categories: View {
             BaseView {
                 GeometryReader { geometry in
                     ScrollView(showsIndicators: false) {
-                        GridStack(rows: (self.viewModel.thoughtCategories.count - 1) / 2 + 1, columns: 2, hAlignment: .leading) { index, row, col in
-                            if self.viewModel.thoughtCategories.endIndex > index {
+                        GridStack(rows: (categoryData.count - 1) / 2 + 1, columns: 2, hAlignment: .leading) { index, row, col in
+                            if (categoryData.endIndex > index) {
                                 // Don't show last element if it's an odd amount of elements
                                 CategoryBadge(
-                                    category: self.viewModel.thoughtCategories[index],
+                                    category: categoryData[index],
                                     parentWidth: geometry.size.width,
                                     onTap: {
-                                        self.chooseCategory(category: self.viewModel.thoughtCategories[index])
+                                        self.chooseCategory(category: categoryData[index])
                                     }
                                 )
                             }
@@ -55,16 +51,16 @@ struct Categories: View {
         }
     }
     
-    func chooseCategory(category: ThoughtCategory) {
+    func chooseCategory(category: Category) {
         self.hideCategories()
         self.chosenCategory = category
     }
 }
 
-//struct Categories_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Group {
-//            Categories(showCategories: .constant(true), chosenCategory: .constant(categoryData[0]))
-//        }
-//    }
-//}
+struct Categories_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            Categories(showCategories: .constant(true), chosenCategory: .constant(categoryData[0]))
+        }
+    }
+}

@@ -17,17 +17,19 @@ struct ThoughtRow: View {
             Text(thought.title)
                 .modifier(ThoughtRowTextStyle())
                 .padding(.trailing)
-            ImageView(from: thought.image.url)
+            thought.image
+                .resizable()
+                .aspectRatio(contentMode: .fit)
                 .frame(height: 45)
         }.padding()
     }
 }
 
-//struct ThoughtRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ThoughtRow(thought: thoughtData[0])
-//            .previewLayout(.sizeThatFits)
-//            .frame(width: 300, height: 65)
-//            .padding()
-//    }
-//}
+struct ThoughtRow_Previews: PreviewProvider {
+    static var previews: some View {
+        ThoughtRow(thought: thoughtData[0])
+            .previewLayout(.sizeThatFits)
+            .frame(width: 300, height: 65)
+            .padding()
+    }
+}
