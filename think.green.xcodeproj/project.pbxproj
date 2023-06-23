@@ -41,6 +41,8 @@
 		B95798D32A38853A0097D65D /* CategoryBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95798CB2A38853A0097D65D /* CategoryBadge.swift */; };
 		B95798D42A38853A0097D65D /* ThoughtTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95798CC2A38853A0097D65D /* ThoughtTitle.swift */; };
 		B95798D52A38853A0097D65D /* InteractiveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95798CD2A38853A0097D65D /* InteractiveCard.swift */; };
+		B95798D72A3892740097D65D /* InteractiveCardNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95798D62A3892740097D65D /* InteractiveCardNew.swift */; };
+		B95798D92A38935B0097D65D /* ThroughDetailNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95798D82A38935B0097D65D /* ThroughDetailNew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +81,8 @@
 		B95798CB2A38853A0097D65D /* CategoryBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryBadge.swift; sourceTree = "<group>"; };
 		B95798CC2A38853A0097D65D /* ThoughtTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThoughtTitle.swift; sourceTree = "<group>"; };
 		B95798CD2A38853A0097D65D /* InteractiveCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveCard.swift; sourceTree = "<group>"; };
+		B95798D62A3892740097D65D /* InteractiveCardNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveCardNew.swift; sourceTree = "<group>"; };
+		B95798D82A38935B0097D65D /* ThroughDetailNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThroughDetailNew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 				B95798C52A38853A0097D65D /* Supporting Views */,
 				B95798BF2A3885190097D65D /* MainView.swift */,
 				B95798C12A3885190097D65D /* ThoughtDetail.swift */,
+				B95798D82A38935B0097D65D /* ThroughDetailNew.swift */,
 				B95798C02A3885190097D65D /* ThoughtList.swift */,
 				B95798BB2A3884B90097D65D /* BaseView.swift */,
 				B95798BC2A3884B90097D65D /* Categories.swift */,
@@ -195,6 +200,7 @@
 				B95798CB2A38853A0097D65D /* CategoryBadge.swift */,
 				B95798CC2A38853A0097D65D /* ThoughtTitle.swift */,
 				B95798CD2A38853A0097D65D /* InteractiveCard.swift */,
+				B95798D62A3892740097D65D /* InteractiveCardNew.swift */,
 			);
 			name = "Supporting Views";
 			path = "../../../Downloads/think.green-cef470e348c6f7dc175bd1e2c18d3725c20b0bfc/think.green/Supporting Views";
@@ -288,6 +294,7 @@
 				B95798B32A38845A0097D65D /* Category.swift in Sources */,
 				B95798CE2A38853A0097D65D /* CategoryLabel.swift in Sources */,
 				21659832240F0BE700BAFC10 /* HostingController.swift in Sources */,
+				B95798D92A38935B0097D65D /* ThroughDetailNew.swift in Sources */,
 				21B79140243A4595002908CE /* CategoryTextStyle.swift in Sources */,
 				B95798D42A38853A0097D65D /* ThoughtTitle.swift in Sources */,
 				21EB080C23F4A3DE00965FF2 /* SecondaryDefaultTextStyle.swift in Sources */,
@@ -296,6 +303,7 @@
 				21730073243D23F900261575 /* UINavigationControllerExtension.swift in Sources */,
 				B95798BE2A3884B90097D65D /* Categories.swift in Sources */,
 				B95798D32A38853A0097D65D /* CategoryBadge.swift in Sources */,
+				B95798D72A3892740097D65D /* InteractiveCardNew.swift in Sources */,
 				B95798D12A38853A0097D65D /* GridStack.swift in Sources */,
 				210343E323ECA4BF00F89D85 /* ColorExtension.swift in Sources */,
 				B95798C22A3885190097D65D /* MainView.swift in Sources */,
